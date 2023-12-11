@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <link rel="stylesheet" href="styles2.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="icon" href="OIG-removebg-preview.png" type="image/x-icon">
+
+</head>
+<body>
+
+    <div class="navContainer">
+        <div class="nav_bar">
+            <div class="left-nav">
+                <div><a href="index.html"><img class="logo" src="OIG-removebg-preview.png" alt=""></a></div>
+                <div><a href="index2.html" class="product_link">Products</a></div>
+                <div><a href="#footer" class="developer_link">About the Developer</a></div>
+            </div>
+            <div class="right-nav">
+                <div><a href="cart.html"><button>Your Cart</button></a></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bannerDIV">
+        <div class="qoutes_container">
+            <h1 class="brandName">ShopVista</h1>
+            <h2 class="brand_tagline">Explore the Horizon of Shopping</h2>
+        </div>
+        <div class="image_cotaner">
+            <img src="OIG-removebg-preview.png" alt="brand_logo">
+        </div>
+    </div>
+
+    
+    <h1>Your Shopping Cart</h1>
+    <div id="cartItems" class="cartItems"></div>
+
+
+    <footer id="footer"></footer>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Check if localStorage is supported
+            if (typeof(Storage) !== "undefined") {
+                // Retrieve cart items from localStorage
+                let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+
+                // Get the cartItems container
+                const cartItemsContainer = document.getElementById('cartItems');
+
+                // Display each item in the cart
+                cartItems.forEach(item => {
+                    const itemDiv = document.createElement('div');
+                    itemDiv.innerHTML = `
+                        <img src="${item.image}" alt="${item.name}" style="max-width: 100px;">
+                        <p>Name: ${item.name}</p>
+                        <p>Price: ${item.price}</p>
+                    `;
+                    cartItemsContainer.appendChild(itemDiv);
+                });
+            } else {
+                alert("Sorry, your browser does not support web storage. Please use a different browser.");
+            }
+        });
+    </script>
+</body>
+</html>

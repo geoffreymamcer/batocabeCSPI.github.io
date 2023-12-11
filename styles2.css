@@ -1,0 +1,143 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #F5F5DD;
+    background-image: url(pexels-shattha-pilabut-135620.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+h1{
+    text-align: center;
+}
+
+.cartItems{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cartItems div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-top: 1rem;
+    width: 40rem;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    font-weight: bold;
+    background-color: white;
+
+}
+
+.logo{
+    width: 75px;
+}
+
+.navContainer{
+    display: flex;
+    justify-content: center;
+    background-color: #AE6E4E;
+}
+
+.left-nav div, .right-nav div{
+    color: #8B4411;
+    font-weight: 700;
+
+}
+
+.nav_bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 99.2%;
+    background-color: #AE6E4E;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    border-bottom: solid;
+    border-width: 2px;
+    border-color: #8B4411;
+    height: 6rem;
+    
+}
+
+.right-nav button{
+    border: none;
+    background-color: #8B4411;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border-radius: 1rem;
+    font-weight: 900;
+    color: #C7AD7F;
+}
+
+.right-nav button:hover{
+    background-color: #C7AD7F;
+    color: #8B4411;
+    cursor: pointer;
+}
+
+.left-nav{
+    display: flex;
+    align-items: center;
+    margin-left: 10rem;
+}
+
+.right-nav{
+    display: flex;
+    align-items: center;
+    margin-right: 10rem;
+
+
+}
+
+.right-nav div, .left-nav div{
+    margin-right: 20px;
+}
+
+.bannerDIV{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #AE6E4E;
+    padding-left: 4%;
+    padding-right: 4%;
+    margin-top: 4.5rem;
+    margin-bottom: 20px;
+}
+
+.qoutes_container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.brandName{
+    font-size: 120px;
+    margin-bottom: 0px;
+    color: #8B4411;
+}
+
+.brand_tagline{
+    margin-top: 0px;
+    font-size: 75px;
+    font-style: italic;
+    font-weight: 300;
+    color: #CC9767 ;
+}
+
+.developer_link, .product_link{
+    text-decoration: none;
+    color: #8B4411;
+}
+
+.developer_link:hover, .product_link:hover{
+    color: white;
+}
